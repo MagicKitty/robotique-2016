@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="16" version="2.0">
+<workbenchAdvisor/>
+<window height="744" maximized="true" width="1024" x="57" y="24">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout>
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="144" y="30"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="156" y="30"/>
+<coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.PropertiesFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1474135856483" focus="true" label="Workspace - Resource">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Cam.java" partName="Cam.java" path="/home/nicolas/Université/Robotique/Robot/src/Camera/Cam.java" title="Cam.java" tooltip="Robot/src/Camera/Cam.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Robot/src/Camera/Cam.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2296" selectionTopPixel="1003"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+</views>
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.ui.resourcePerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.views.BookmarkView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.team.cvs.ui.cvsPerspective"/>
+<perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="16384" id="bottomLeft" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>
+<mainWindow>
+<info folder="true" part="topLeft">
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.20647149" ratioLeft="268" ratioRight="1030" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottomRight" ratio="0.6381381" ratioLeft="425" ratioRight="241" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="org.eclipse.team.ui.GenericHistoryView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.callhierarchy.view" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="bottomLeft" ratio="0.5" ratioLeft="320" ratioRight="320" relationship="4" relative="topLeft">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Robot/src/Camera/Cam.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Robot/src/Camera/CameraDetection.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Robot/src/Camera/FacePainterExample.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=Robot/\/home\/nicolas\/Université\/Robotique\/faces-1.2.1.jar&lt;org.openimaj.image.processing.face.detection(HaarCascadeDetector.class"/>
+<editor element="=Robot/\/home\/nicolas\/Université\/Robotique\/faces-1.2.1.jar" factoryID="org.eclipse.jdt.ui.internal.JarEntryEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" path="META-INF/maven/org.openimaj/faces/pom.properties"/>
+<editor element="=Robot/\/home\/nicolas\/Université\/Robotique\/faces-1.2.1.jar" factoryID="org.eclipse.jdt.ui.internal.JarEntryEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="META-INF/maven/org.openimaj/faces/pom.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Robot/src/Camera/CameraDetection.java"/>
+</editors>
+<item historyLabel="FacePainterExample.java" index="2">
+<position info="not_deleted" x="19" y="722"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position/>
+</item>
+<item historyLabel="FacePainterExample.java" index="2">
+<position info="not_deleted" x="19" y="722"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="2416" y="0"/>
+</item>
+<item historyLabel="CameraDetection.java" index="1">
+<position/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="2416" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="2925" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="4605" y="0"/>
+</item>
+<item historyLabel="FacePainterExample.java" index="2">
+<position info="not_deleted" x="19" y="722"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="4605" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="2925" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="2924" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="2922" y="0"/>
+</item>
+<item historyLabel="CameraDetection.java" index="1">
+<position info="not_deleted" x="253" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="2922" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="2738" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="1948" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="2005" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="2080" y="79"/>
+</item>
+<item historyLabel="HaarCascadeDetector.class" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="2080" y="79"/>
+</item>
+<item historyLabel="pom.properties" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="pom.xml" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="pom.properties" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="3086" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="1366" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="3225" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position/>
+</item>
+<item historyLabel="CameraDetection.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="543" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="3252" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="2262" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="2276" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="3639" y="0"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="3619" y="21"/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position/>
+</item>
+<item historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="2294" y="0"/>
+</item>
+<item active="true" historyLabel="Cam.java" index="0">
+<position info="not_deleted" x="3293" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="bottomLeft"/>
+</trimArea>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CameraDetection.java" tooltip="Robot/src/Camera/CameraDetection.java">
+<persistable path="/Robot/src/Camera/CameraDetection.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.internal.JarEntryEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="pom.xml" tooltip="/home/nicolas/Université/Robotique/faces-1.2.1.jar/META-INF/maven/org.openimaj/faces/pom.xml">
+<persistable element="=Robot/\/home\/nicolas\/Université\/Robotique\/faces-1.2.1.jar" path="META-INF/maven/org.openimaj/faces/pom.xml"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.internal.JarEntryEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" name="pom.properties" tooltip="/home/nicolas/Université/Robotique/faces-1.2.1.jar/META-INF/maven/org.openimaj/faces/pom.properties">
+<persistable element="=Robot/\/home\/nicolas\/Université\/Robotique\/faces-1.2.1.jar" path="META-INF/maven/org.openimaj/faces/pom.properties"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="HaarCascadeDetector.class" tooltip="org.openimaj.image.processing.face.detection.HaarCascadeDetector">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Robot/\/home\/nicolas\/Université\/Robotique\/faces-1.2.1.jar&lt;org.openimaj.image.processing.face.detection(HaarCascadeDetector.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FacePainterExample.java" tooltip="Robot/src/Camera/FacePainterExample.java">
+<persistable path="/Robot/src/Camera/FacePainterExample.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="IpCamDevice.class" tooltip="com.github.sarxos.webcam.ds.ipcam.IpCamDevice">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Robot/\/home\/nicolas\/Université\/Robotique\/webcam-capture-driver-ipcam-0.3.10-RC7.jar&lt;com.github.sarxos.webcam.ds.ipcam(IpCamDevice.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Cam.java" tooltip="Robot/src/Camera/Cam.java">
+<persistable path="/Robot/src/Camera/Cam.java"/>
+</file>
+</mruList>
+</workbench>

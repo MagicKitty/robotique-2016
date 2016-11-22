@@ -1,0 +1,186 @@
+************************************* Invoked: lun. févr. 22 18:16:16 2016
+[0] Arguments:  /home/nicolas/TRIKStudio-3.1.3-offline-linux-x64-installer.run
+[1] Operations sanity check succeeded.
+[1723] Unable to open translated license file"://metadata//ru.qreal.root.ev3/QextSerialPort-license_fr.txt". Using untranslated fallback.
+[1723] Unable to open translated license file"://metadata//ru.qreal.root.nxt.core/QextSerialPort-license_fr.txt". Using untranslated fallback.
+[1724] Unable to open translated license file"://metadata//ru.qreal.root.trik.core/WinScp-license_fr.txt". Using untranslated fallback.
+[1732] Unable to open translated license file"://metadata//ru.qreal.root/QScintilla-GPL-exception_fr.txt". Using untranslated fallback.
+[1732] Unable to open translated license file"://metadata//ru.qreal.root/QsLog-license_fr.txt". Using untranslated fallback.
+[1732] Unable to open translated license file"://metadata//ru.qreal.root/ApacheLicense-v2_fr.0.txt". Using untranslated fallback.
+[1732] Unable to open translated license file"://metadata//ru.qreal.root/gpl-3_fr.0.txt". Using untranslated fallback.
+[1733] Unable to open translated license file"://metadata//ru.qreal.root/OFL_fr.txt". Using untranslated fallback.
+[1733] Unable to open translated license file"://metadata//ru.qreal.root/Scintilla-license_fr.txt". Using untranslated fallback.
+[1733] Unable to open translated license file"://metadata//ru.qreal.root/QtPropertyBrowser-license_fr.txt". Using untranslated fallback.
+[1733] Unable to open translated license file"://metadata//ru.qreal.root/WindowsModernStyle-license_fr.txt". Using untranslated fallback.
+[1733] Unable to open translated license file"://metadata//ru.qreal.root/QsKineticScroller-license_fr.txt". Using untranslated fallback.
+[13419] Tmp and install folder are on the same volume. Volume mount point: "/" Free space available: "473.66 GiB"
+[13419] Installation space required: "195.89 MiB" Temporary space required: "0.00 octets" Local repository size: "0.00 octets"
+[14263] backup  operation: Mkdir
+[14263] 	- arguments: /home/nicolas/TRIKStudio
+[14263] Done
+[14263] perform  operation: Mkdir
+[14263] 	- arguments: /home/nicolas/TRIKStudio
+[14263] Done
+[14263] Install size: 17 components
+[14335] backup ru.qreal.root operation: Extract
+[14335] 	- arguments: installer://ru.qreal.root/3.1.3-4bin.7z, /home/nicolas/TRIKStudio
+[14335] Done
+[14336] perform ru.qreal.root operation: Extract
+[14336] 	- arguments: installer://ru.qreal.root/3.1.3-4bin.7z, /home/nicolas/TRIKStudio
+[14465] Done
+[14465] backup ru.qreal.root operation: Extract
+[14465] 	- arguments: installer://ru.qreal.root/3.1.3-4content.7z, /home/nicolas/TRIKStudio
+[14465] Done
+[14465] perform ru.qreal.root operation: Extract
+[14465] 	- arguments: installer://ru.qreal.root/3.1.3-4content.7z, /home/nicolas/TRIKStudio
+[14466] Done
+[14466] backup ru.qreal.root operation: Extract
+[14466] 	- arguments: installer://ru.qreal.root/3.1.3-4lib.7z, /home/nicolas/TRIKStudio
+[14466] Done
+[14466] perform ru.qreal.root operation: Extract
+[14466] 	- arguments: installer://ru.qreal.root/3.1.3-4lib.7z, /home/nicolas/TRIKStudio
+[16066] Done
+[16067] backup ru.qreal.root operation: Extract
+[16067] 	- arguments: installer://ru.qreal.root/3.1.3-4resources.7z, /home/nicolas/TRIKStudio
+[16067] Done
+[16067] perform ru.qreal.root operation: Extract
+[16067] 	- arguments: installer://ru.qreal.root/3.1.3-4resources.7z, /home/nicolas/TRIKStudio
+[16069] Done
+[16069] backup ru.qreal.root operation: Execute
+[16069] 	- arguments: bash, -c, LD_LIBRARY_PATH=/home/nicolas/TRIKStudio /home/nicolas/TRIKStudio/trik-studio --clear-conf
+[16069] Done
+[16069] perform ru.qreal.root operation: Execute
+[16069] 	- arguments: bash, -c, LD_LIBRARY_PATH=/home/nicolas/TRIKStudio /home/nicolas/TRIKStudio/trik-studio --clear-conf
+[16070] bash" started, arguments: "-c LD_LIBRARY_PATH=/home/nicolas/TRIKStudio /home/nicolas/TRIKStudio/trik-studio --clear-conf
+[16677] Done
+[16678] backup ru.qreal.root operation: License
+[16678] 	- arguments: 
+[16678] Done
+[16678] perform ru.qreal.root operation: License
+[16678] 	- arguments: 
+[16679] Done
+[16679] backup ru.qreal.root.trik_studio_kernel operation: Extract
+[16679] 	- arguments: installer://ru.qreal.root.trik_studio_kernel/3.1.3-4bin.7z, /home/nicolas/TRIKStudio
+[16679] Done
+[16679] perform ru.qreal.root.trik_studio_kernel operation: Extract
+[16679] 	- arguments: installer://ru.qreal.root.trik_studio_kernel/3.1.3-4bin.7z, /home/nicolas/TRIKStudio
+[16714] Done
+[16714] backup ru.qreal.root.trik_studio_kernel operation: Extract
+[16714] 	- arguments: installer://ru.qreal.root.trik_studio_kernel/3.1.3-4lib.7z, /home/nicolas/TRIKStudio
+[16714] Done
+[16714] perform ru.qreal.root.trik_studio_kernel operation: Extract
+[16714] 	- arguments: installer://ru.qreal.root.trik_studio_kernel/3.1.3-4lib.7z, /home/nicolas/TRIKStudio
+[16939] Done
+[16939] backup ru.qreal.root.trik_studio_kernel operation: Extract
+[16939] 	- arguments: installer://ru.qreal.root.trik_studio_kernel/3.1.3-4resources.7z, /home/nicolas/TRIKStudio
+[16939] Done
+[16940] perform ru.qreal.root.trik_studio_kernel operation: Extract
+[16940] 	- arguments: installer://ru.qreal.root.trik_studio_kernel/3.1.3-4resources.7z, /home/nicolas/TRIKStudio
+[17169] Done
+[17171] backup ru.qreal.root.ev3 operation: Extract
+[17171] 	- arguments: installer://ru.qreal.root.ev3/3.1.3-4lib.7z, /home/nicolas/TRIKStudio
+[17171] Done
+[17172] perform ru.qreal.root.ev3 operation: Extract
+[17172] 	- arguments: installer://ru.qreal.root.ev3/3.1.3-4lib.7z, /home/nicolas/TRIKStudio
+[17243] Done
+[17243] backup ru.qreal.root.ev3 operation: Extract
+[17243] 	- arguments: installer://ru.qreal.root.ev3/3.1.3-4resources.7z, /home/nicolas/TRIKStudio
+[17243] Done
+[17243] perform ru.qreal.root.ev3 operation: Extract
+[17243] 	- arguments: installer://ru.qreal.root.ev3/3.1.3-4resources.7z, /home/nicolas/TRIKStudio
+[17244] Done
+[17244] backup ru.qreal.root.ev3 operation: License
+[17244] 	- arguments: 
+[17244] Done
+[17244] perform ru.qreal.root.ev3 operation: License
+[17244] 	- arguments: 
+[17244] Done
+[17416] backup ru.qreal.root.desktop_shortcut operation: CreateShortcut
+[17416] 	- arguments: /home/nicolas/TRIKStudio/trik-studio, /TRIK Studio 3.1.3
+[17416] Done
+[17417] perform ru.qreal.root.desktop_shortcut operation: CreateShortcut
+[17417] 	- arguments: /home/nicolas/TRIKStudio/trik-studio, /TRIK Studio 3.1.3
+[17417] Done
+[17418] backup ru.qreal.root.trik.core operation: Extract
+[17418] 	- arguments: installer://ru.qreal.root.trik.core/3.1.3-4lib.7z, /home/nicolas/TRIKStudio
+[17418] Done
+[17418] perform ru.qreal.root.trik.core operation: Extract
+[17418] 	- arguments: installer://ru.qreal.root.trik.core/3.1.3-4lib.7z, /home/nicolas/TRIKStudio
+[17528] Done
+[17528] backup ru.qreal.root.trik.core operation: Extract
+[17528] 	- arguments: installer://ru.qreal.root.trik.core/3.1.3-4resources.7z, /home/nicolas/TRIKStudio
+[17528] Done
+[17528] perform ru.qreal.root.trik.core operation: Extract
+[17528] 	- arguments: installer://ru.qreal.root.trik.core/3.1.3-4resources.7z, /home/nicolas/TRIKStudio
+[18787] Done
+[18788] backup ru.qreal.root.trik.core operation: License
+[18788] 	- arguments: 
+[18788] Done
+[18788] perform ru.qreal.root.trik.core operation: License
+[18788] 	- arguments: 
+[18788] Done
+[18789] backup ru.qreal.root.trik.examples operation: Extract
+[18789] 	- arguments: installer://ru.qreal.root.trik.examples/3.1.3-4resources.7z, /home/nicolas/TRIKStudio
+[18789] Done
+[18789] perform ru.qreal.root.trik.examples operation: Extract
+[18789] 	- arguments: installer://ru.qreal.root.trik.examples/3.1.3-4resources.7z, /home/nicolas/TRIKStudio
+[18889] Done
+[19436] backup ru.qreal.root.trik.gamepad operation: Extract
+[19436] 	- arguments: installer://ru.qreal.root.trik.gamepad/3.1.3-4content.7z, /home/nicolas/TRIKStudio
+[19436] Done
+[19436] perform ru.qreal.root.trik.gamepad operation: Extract
+[19436] 	- arguments: installer://ru.qreal.root.trik.gamepad/3.1.3-4content.7z, /home/nicolas/TRIKStudio
+[19440] Done
+[19442] backup ru.qreal.root.trik.core.v62 operation: Extract
+[19442] 	- arguments: installer://ru.qreal.root.trik.core.v62/3.1.3-4lib.7z, /home/nicolas/TRIKStudio
+[19442] Done
+[19442] perform ru.qreal.root.trik.core.v62 operation: Extract
+[19443] 	- arguments: installer://ru.qreal.root.trik.core.v62/3.1.3-4lib.7z, /home/nicolas/TRIKStudio
+[19450] Done
+[19451] backup ru.qreal.root.trik.core.v6 operation: Extract
+[19451] 	- arguments: installer://ru.qreal.root.trik.core.v6/3.1.3-4lib.7z, /home/nicolas/TRIKStudio
+[19451] Done
+[19451] perform ru.qreal.root.trik.core.v6 operation: Extract
+[19451] 	- arguments: installer://ru.qreal.root.trik.core.v6/3.1.3-4lib.7z, /home/nicolas/TRIKStudio
+[19459] Done
+[19461] backup ru.qreal.root.nxt.core operation: Extract
+[19461] 	- arguments: installer://ru.qreal.root.nxt.core/3.1.3-4lib.7z, /home/nicolas/TRIKStudio
+[19461] Done
+[19461] perform ru.qreal.root.nxt.core operation: Extract
+[19461] 	- arguments: installer://ru.qreal.root.nxt.core/3.1.3-4lib.7z, /home/nicolas/TRIKStudio
+[19501] Done
+[19502] backup ru.qreal.root.nxt.core operation: License
+[19502] 	- arguments: 
+[19502] Done
+[19502] perform ru.qreal.root.nxt.core operation: License
+[19502] 	- arguments: 
+[19502] Done
+[19503] backup ru.qreal.root.nxt.examples operation: Extract
+[19503] 	- arguments: installer://ru.qreal.root.nxt.examples/3.1.3-4resources.7z, /home/nicolas/TRIKStudio
+[19503] Done
+[19503] perform ru.qreal.root.nxt.examples operation: Extract
+[19503] 	- arguments: installer://ru.qreal.root.nxt.examples/3.1.3-4resources.7z, /home/nicolas/TRIKStudio
+[19523] Done
+[19525] backup ru.qreal.root.ev3.examples operation: Extract
+[19525] 	- arguments: installer://ru.qreal.root.ev3.examples/3.1.3-4resources.7z, /home/nicolas/TRIKStudio
+[19525] Done
+[19526] perform ru.qreal.root.ev3.examples operation: Extract
+[19526] 	- arguments: installer://ru.qreal.root.ev3.examples/3.1.3-4resources.7z, /home/nicolas/TRIKStudio
+[19534] Done
+[19536] backup ru.qreal.root.languages.french operation: Extract
+[19536] 	- arguments: installer://ru.qreal.root.languages.french/3.1.3-4resources.7z, /home/nicolas/TRIKStudio
+[19536] Done
+[19536] perform ru.qreal.root.languages.french operation: Extract
+[19536] 	- arguments: installer://ru.qreal.root.languages.french/3.1.3-4resources.7z, /home/nicolas/TRIKStudio
+[19547] Done
+[19548] backup ru.qreal.root.languages.russian operation: Extract
+[19548] 	- arguments: installer://ru.qreal.root.languages.russian/3.1.3-4resources.7z, /home/nicolas/TRIKStudio
+[19548] Done
+[19548] perform ru.qreal.root.languages.russian operation: Extract
+[19548] 	- arguments: installer://ru.qreal.root.languages.russian/3.1.3-4resources.7z, /home/nicolas/TRIKStudio
+[19569] Done
+[19572] Writing maintenance tool: "/home/nicolas/TRIKStudio/maintenance.new"
+[19754] Wrote permissions for maintenance tool.
+[20542] Maintenance tool restart: false.
+[20544] SHOW FINISHED PAGE
+[23093] starting "bash" ("/home/nicolas/TRIKStudio/trik-studio")

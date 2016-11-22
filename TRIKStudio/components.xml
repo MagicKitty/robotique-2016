@@ -1,0 +1,193 @@
+<Packages>
+    <ApplicationName>TRIK Studio</ApplicationName>
+    <ApplicationVersion>1.0.0</ApplicationVersion>
+    <Package>
+        <Name>ru.qreal.root</Name>
+        <Pixmap></Pixmap>
+        <Title>TRIK Studio</Title>
+        <Description>QReal metacase tool engine</Description>
+        <Version>3.1.3-4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-02-22</InstallDate>
+        <Size>67499536</Size>
+        <Dependencies></Dependencies>
+        <ForcedInstallation>true</ForcedInstallation>
+    </Package>
+    <Package>
+        <Name>ru.qreal.root.trik_studio_kernel</Name>
+        <Pixmap></Pixmap>
+        <Title>Компоненты ядра</Title>
+        <Description>TRIK Studio engine, must be installed</Description>
+        <Version>3.1.3-4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-02-22</InstallDate>
+        <Size>14928247</Size>
+        <Dependencies></Dependencies>
+        <ForcedInstallation>true</ForcedInstallation>
+    </Package>
+    <Package>
+        <Name>ru.qreal.root.trik</Name>
+        <Pixmap></Pixmap>
+        <Title>Поддержка ТРИК</Title>
+        <Description>Packages for working with TRIK in TRIK Studio</Description>
+        <Version>3.1.3-4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-02-22</InstallDate>
+        <Size>0</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>ru.qreal.root.nxt</Name>
+        <Pixmap></Pixmap>
+        <Title>Поддержка Lego NXT</Title>
+        <Description>Packages for working with Lego NXT in TRIK Studio</Description>
+        <Version>3.1.3-4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-02-22</InstallDate>
+        <Size>0</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>ru.qreal.root.ev3</Name>
+        <Pixmap></Pixmap>
+        <Title>Поддержка Lego EV3</Title>
+        <Description>Install it for working with Lego EV3 in TRIK Studio</Description>
+        <Version>3.1.3-4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-02-22</InstallDate>
+        <Size>1473861</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>ru.qreal.root.languages</Name>
+        <Pixmap></Pixmap>
+        <Title>Языки</Title>
+        <Description></Description>
+        <Version>3.1.3-4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-02-22</InstallDate>
+        <Size>0</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>ru.qreal.root.desktop_shortcut</Name>
+        <Pixmap></Pixmap>
+        <Title>Ярлык на рабочем столе</Title>
+        <Description></Description>
+        <Version>3.1.3-4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-02-22</InstallDate>
+        <Size>0</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>ru.qreal.root.trik.core</Name>
+        <Pixmap></Pixmap>
+        <Title>Поддержка ТРИК</Title>
+        <Description>Enables support of TRIK in TRIK Studio</Description>
+        <Version>3.1.3-4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-02-22</InstallDate>
+        <Size>99359173</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>ru.qreal.root.trik.examples</Name>
+        <Pixmap></Pixmap>
+        <Title>Примеры</Title>
+        <Description>A set of examples for TRIK kit</Description>
+        <Version>3.1.3-4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-02-22</InstallDate>
+        <Size>1107761</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>ru.qreal.root.trik.gamepad</Name>
+        <Pixmap></Pixmap>
+        <Title>Пультик для ТРИК</Title>
+        <Description>Simple desktop gamepad for TRIK</Description>
+        <Version>3.1.3-4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-02-22</InstallDate>
+        <Size>59318</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>ru.qreal.root.trik.core.v62</Name>
+        <Pixmap></Pixmap>
+        <Title>Поддержка ТРИК (новый корпус)</Title>
+        <Description>Enables support of TRIK (new case) in TRIK Studio</Description>
+        <Version>3.1.3-4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-02-22</InstallDate>
+        <Size>156880</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>ru.qreal.root.trik.core.v6</Name>
+        <Pixmap></Pixmap>
+        <Title>Поддержка ТРИК (старый корпус)</Title>
+        <Description>Enables support of TRIK in TRIK Studio</Description>
+        <Version>3.1.3-4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-02-22</InstallDate>
+        <Size>166006</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>ru.qreal.root.nxt.core</Name>
+        <Pixmap></Pixmap>
+        <Title>Обязательные файлы</Title>
+        <Description>Enables support of Lego NXT in TRIK Studio</Description>
+        <Version>3.1.3-4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-02-22</InstallDate>
+        <Size>1118308</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>ru.qreal.root.nxt.examples</Name>
+        <Pixmap></Pixmap>
+        <Title>Примеры</Title>
+        <Description>A set of examples for Lego NXT kit</Description>
+        <Version>3.1.3-4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-02-22</InstallDate>
+        <Size>152056</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>ru.qreal.root.ev3.examples</Name>
+        <Pixmap></Pixmap>
+        <Title>Примеры</Title>
+        <Description>A set of examples for Lego EV3 kit</Description>
+        <Version>3.1.3-4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-02-22</InstallDate>
+        <Size>67589</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>ru.qreal.root.languages.french</Name>
+        <Pixmap></Pixmap>
+        <Title>Français</Title>
+        <Description></Description>
+        <Version>3.1.3-4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-02-22</InstallDate>
+        <Size>145451</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>ru.qreal.root.languages.russian</Name>
+        <Pixmap></Pixmap>
+        <Title>Русский</Title>
+        <Description></Description>
+        <Version>3.1.3-4</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2016-02-22</InstallDate>
+        <Size>500422</Size>
+        <Dependencies></Dependencies>
+    </Package>
+</Packages>

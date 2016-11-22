@@ -1,0 +1,13 @@
+TESTS - IHM
+
+Fullscreen arrive à adapter la taille de la webcam.
+Taille de la webcam variable en fonction de la taille de la fenêtre.
+Proportion gardée en cas de resize de la fenêtre.
+Informations affichées aux bons emplacements.
+Informations à affichage adapté en fonction de sa valeur.
+Bonne détection de mouvements.
+Détection de caméra valide.
+Taux de rafraîchissement des informations.
+Gigue diminuée au minimum par rapport à la qualité vidéo. (bon live)
+Tourne sur multiples plateformes. (Windows7, Linux)
+

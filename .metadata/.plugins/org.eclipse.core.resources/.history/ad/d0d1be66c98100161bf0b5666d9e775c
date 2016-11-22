@@ -1,0 +1,79 @@
+package Camera;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.net.MalformedURLException;
+
+import javax.swing.JFrame;
+import javax.swing.JLayeredPane;
+
+import com.github.sarxos.webcam.Webcam;
+import com.github.sarxos.webcam.WebcamPanel;
+import com.github.sarxos.webcam.WebcamResolution;
+import com.github.sarxos.webcam.ds.ipcam.IpCamDeviceRegistry;
+import com.github.sarxos.webcam.ds.ipcam.IpCamDriver;
+import com.github.sarxos.webcam.ds.ipcam.IpCamMode;
+
+/**
+ *
+ * @author Bartosz Firyn (SarXos)
+ */
+public class Cam {
+	
+	static {
+		Webcam.setDriver(new IpCamDriver());
+	}
+	
+	static Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+	static double width = screenSize.getWidth()/1.2;
+	static double height = screenSize.getHeight()/1.2;
+	static int WIDTH = (int)width;
+	static int HEIGHT = (int)height;
+	
+	public static void main(String[] args) throws MalformedURLException {
+		
+		System.out.println("Started IHM");
+
+		
+		
+		
+		
+		
+		IpCamDeviceRegistry.register("Smartphone", "http://192.168.43.1:8080/video", IpCamMode.PUSH);
+		
+		Webcam webcam = (Webcam) Webcam.getWebcams().get(0);
+		webcam.setViewSize(WebcamResolution.VGA.getSize());
+		WebcamPanel video = new WebcamPanel(webcam);
+		video.setFPSDisplayed(true);
+		video.setDisplayDebugInfo(false);
+		video.setImageSizeDisplayed(true);
+		
+		JFrame f = new JFrame("IHM - Robafis - 2016");
+		Dimension dimensionWebcam = new Dimension();
+		dimensionWebcam = webcam.getViewSize();
+		f.setPreferredSize(new Dimension(dimensionWebcam));
+		f.setResizable(false);
+		//f.setLayout(new BorderLayout());
+
+		JLayeredPane layeredPane = new JLayeredPane();
+		f.add(layeredPane, BorderLayout.CENTER);
+
+		int widthBounds = (int)webcam.getViewSize().getWidth();
+		int heightBounds = (int)webcam.getViewSize().getHeight();
+		video.setBounds(0, 0, widthBounds, heightBounds);
+		layeredPane.add(video, new Integer(1));
+		
+		f.pack();
+		f.setLocationRelativeTo(null);
+		f.setVisible(true);
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+		
+		
+		
+		
+		System.out.println("Ended IHM");
+	}
+}

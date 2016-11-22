@@ -1,0 +1,17 @@
+Point de vu conception :
+
+Nous avons choisi de mettre ce que film la caméra en fond et avec les informations qui se supperposent pour avoir un rendu plus agréable à l'oeuil.
+La résolution choisie est aussi fluide qu'une autre résolution plus basse. Nous avons donc opté pour la meilleure résolution avec le minimum de latence.
+La couleur est inutile dans notre situation car la surface de parcours est uniquement noir ou blanche.
+Nous avons convenu que dans le futur nous créerions une Map (carte) mise à jour en temps réelle pour avoir une vision de l'ensemble au fur et à mesure du parcours du robot. Cette carte serait éventuellement placée en haut à droite avec proportion 1/5 pour avoir toujours une bonne visibilité de l'information vidéo. De plus quelques raccourcis clavier ont été pensés pour permettre de la visualiser avec échelle 1:1.
+Une indication de la proximité du robot comparée à l'obstacle et donc qui correspond au moment idéal pour le placement des jetons est également dans nos plans.
+Nous somme actuellement avec une interface prête pour un input des commandes clavier ou manette afin de retransmettre la vitesse du robot.
+D'autre part le nombre de jetons disponibles est également affiché.
+Une indication de la date et de la charge de la batterie nous a semblé utile.
+Ne souhaitant pas surcharger de trop l'IHM, nous avons décidé de nous restraindre à ces informations là seulement.
+
+
+Point de vu utilisateur :
+
+L'utilisateur se contentera d'utiliser sa manette ou le clavier devant un écran d'ordinateur ou terminal.
+Avec les informations que nous lui présentons, il sera capable de diriger de façon optimale le robot.

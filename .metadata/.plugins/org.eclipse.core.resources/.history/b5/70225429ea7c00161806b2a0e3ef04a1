@@ -1,0 +1,75 @@
+package Camera;
+
+import java.awt.AlphaComposite;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.net.MalformedURLException;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+import com.github.sarxos.webcam.Webcam;
+import com.github.sarxos.webcam.WebcamPanel;
+import com.github.sarxos.webcam.ds.ipcam.IpCamDeviceRegistry;
+import com.github.sarxos.webcam.ds.ipcam.IpCamDriver;
+import com.github.sarxos.webcam.ds.ipcam.IpCamMode;
+
+
+/**
+ * Example of how to stream MJPEG with Webcam Capture.
+ * 
+ * @author Bartosz Firyn (SarXos)
+ */
+public class Cam {
+
+	/**
+	 * Remember to add IP camera driver JAR to the application classpath!
+	 * Otherwise you will not be able to use IP camera driver features. Driver
+	 * has to be set at the very beginning, before any webcam-capture related
+	 * method is being invoked.
+	 */
+	static {
+		Webcam.setDriver(new IpCamDriver());
+	}
+	
+	static int WIDTH = 1024;
+	static int HEIGHT = 768;
+	
+	public static void main(String[] args) throws MalformedURLException {
+		
+		System.out.println("Started IHM");
+
+		IpCamDeviceRegistry.register("Smartphone", "http://192.168.43.1:8080/video", IpCamMode.PUSH);
+
+		Webcam webcam = (Webcam) Webcam.getWebcams().get(0);
+		if (webcam == null) {
+			System.out.println("No webcams found...");
+			System.exit(1);
+		}
+		WebcamPanel panel = new WebcamPanel(webcam);
+		
+		panel.setFPSLimit(1);
+
+		JFrame f = new JFrame("IHM - Robafis - 2016");
+		panel.setPreferredSize(new Dimension(WIDTH,HEIGHT));
+		
+		Graphics2D g2d = (Graphics2D) g;
+        g2d.setRenderingHint(
+            RenderingHints.KEY_ANTIALIASING,
+            RenderingHints.VALUE_ANTIALIAS_ON);
+        g2d.setComposite(AlphaComposite.getInstance(
+            AlphaComposite.SRC_OVER, 0.3f));
+        g2d.setColor(Color.yellow);
+        g2d.fillOval(10, 10, 120, 60);
+		
+		f.add(panel);
+		f.pack();
+		f.setLocationRelativeTo(null);
+		f.setVisible(true);
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		System.out.println("Ended IHM");
+	}
+}

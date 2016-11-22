@@ -1,0 +1,89 @@
+package Camera;
+
+import java.awt.Dimension;
+import java.awt.image.BufferedImageOp;
+import java.net.MalformedURLException;
+
+import javax.swing.JFrame;
+
+import com.github.sarxos.webcam.Webcam;
+import com.github.sarxos.webcam.WebcamPanel;
+import com.github.sarxos.webcam.ds.ipcam.IpCamDeviceRegistry;
+import com.github.sarxos.webcam.ds.ipcam.IpCamDriver;
+import com.github.sarxos.webcam.ds.ipcam.IpCamMode;
+
+import com.github.sarxos.webcam.util.jh.JHFlipFilter;
+
+
+/**
+ * Example of how to stream MJPEG with Webcam Capture.
+ * 
+ * @author Bartosz Firyn (SarXos)
+ */
+public class Cam {
+
+	/**
+	 * Remember to add IP camera driver JAR to the application classpath!
+	 * Otherwise you will not be able to use IP camera driver features. Driver
+	 * has to be set at the very beginning, before any webcam-capture related
+	 * method is being invoked.
+	 */
+	static {
+		Webcam.setDriver(new IpCamDriver());
+	}
+	
+	static int WIDTH = 1024;
+	static int HEIGHT = 768;
+	private final BufferedImageOp filter = new JHFlipFilter(JHFlipFilter.FLIP_90CW);
+	
+	public static void main(String[] args) throws MalformedURLException {
+
+		IpCamDeviceRegistry.register("Smartphone", "http://192.168.43.1:8080/video", IpCamMode.PUSH);
+
+		Webcam webcam = (Webcam) Webcam.getWebcams().get(0);
+		WebcamPanel panel = new WebcamPanel(webcam);
+		
+		panel.setFPSLimit(1);
+
+		JFrame f = new JFrame("IHM - Robafis - 2016");
+		panel.setPreferredSize(new Dimension(WIDTH,HEIGHT));
+		f.add(panel);
+		f.pack();
+		f.setLocationRelativeTo(null);
+		f.setVisible(true);
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	
+	public ImageTransformerRotationExample() {
+
+		// use VGA resolution
+
+		Dimension size = WebcamResolution.VGA.getSize();
+
+		// get default webcam and set image transformer to this (transformer will modify image after
+		// it's received from webcam, in this case it will rotate it)
+
+		Webcam webcam = Webcam.getDefault();
+		webcam.setViewSize(size);
+		webcam.setImageTransformer(this);
+		webcam.open();
+
+		// create window
+
+		JFrame window = new JFrame("Test Rotation");
+
+		// and webcam panel
+
+		WebcamPanel panel = new WebcamPanel(webcam);
+		panel.setFPSDisplayed(true);
+		panel.setFitArea(true);
+
+		// add panel to window
+
+		window.add(panel);
+		window.pack();
+		window.setVisible(true);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}
