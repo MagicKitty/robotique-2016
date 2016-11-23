@@ -1,0 +1,25 @@
+package tests;
+
+public class Modele {
+	
+	static long chrono = 0;
+	
+	static void Go_Chrono() { 
+		System.out.println("hello");
+		chrono = java.lang.System.currentTimeMillis() ;
+		System.out.println(chrono);
+	}
+
+	public Modele() {
+		ObservableValue ov = new ObservableValue(0);
+		TextObserver to = new TextObserver(ov);
+		ov.addObserver(to);
+	}
+
+	public static void main(String[] args)	{
+//		Modele m = new Modele();
+		System.out.println("hello1");
+		Go_Chrono();
+	}
+
+}	

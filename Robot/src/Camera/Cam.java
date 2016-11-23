@@ -4,15 +4,19 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.Toolkit;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
+import java.awt.image.BufferedImage;
 import java.net.MalformedURLException;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import com.github.sarxos.webcam.Webcam;
@@ -22,13 +26,13 @@ import com.github.sarxos.webcam.ds.ipcam.IpCamDeviceRegistry;
 import com.github.sarxos.webcam.ds.ipcam.IpCamDriver;
 import com.github.sarxos.webcam.ds.ipcam.IpCamMode;
 
-import Manette.BluetoothManager;
-import Manette.XBoxCtrlListener;
-import ch.aplu.xboxcontroller.XboxController;
+//import Manette.BluetoothManager;
+//import Manette.XBoxCtrlListener;
+//import ch.aplu.xboxcontroller.XboxController;
 
 public class Cam {
 
-	private static JFrame f = new JFrame("IHM - Robafis - 2016");
+	private static MaJFrame f;
 	
 	private static WebcamPanel video;
 	
@@ -49,8 +53,10 @@ public class Cam {
 	
 	private static JLabel jlSpeed = new JLabel();
 	private static JLabel jlJetons = new JLabel();
+	private static JLabel jlChrono = new JLabel();
 	private static JLabel jlWebcamSize = new JLabel();
 	private static JPanel jpInformations = new JPanel();
+	private static JPanel jpInformations2 = new JPanel();
 	
 	private static Font font = new Font("Arial",Font.PLAIN,20);
 	private static Font font2 = new Font("Arial",Font.BOLD,15);
@@ -66,11 +72,11 @@ public class Cam {
 
 	public static void startIHM() {
 		
-		setXBoxController();
+//		setXBoxController();
 		
 		setWebcamIPAsVideo();
 		
-		setFrameProperties();
+		f = new MaJFrame(widthFrame,heightFrame);
 		
 		f.add(layeredPane, BorderLayout.CENTER);
 
@@ -81,6 +87,8 @@ public class Cam {
 		setJPanelInformations();
 		
 		layeredPane.add(jpInformations, new Integer(2));
+		
+		layeredPane.add(jpInformations2, new Integer(3));
 	}
 	
 	private static void setWebcamIPAsVideo() {
@@ -93,28 +101,16 @@ public class Cam {
 		new CameraDetection();
 		
 		new RepetAction();
+		
+		new RepetChrono();
 
 		Webcam webcam = (Webcam) Webcam.getWebcams().get(0);
 		webcam.setViewSize(WebcamResolution.VGA.getSize());
 		video = new WebcamPanel(webcam);
-		
-//		new WebcamMotion(webcam);
 
 		widthFrame = (int)webcam.getViewSize().getWidth();
 		heightFrame = (int)webcam.getViewSize().getHeight();
 		video.setBounds(0, 0, widthFrame, heightFrame);
-	}
-	
-	private static void setFrameProperties() {
-		Dimension dimensionWebcam = new Dimension(widthFrame,heightFrame);
-		
-		f.setResizable(true);
-		f.setPreferredSize(new Dimension(dimensionWebcam));
-
-		f.pack();
-		f.setLocationRelativeTo(null);
-		f.setVisible(true);
-		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 	private static void windowResize() {
@@ -140,6 +136,7 @@ public class Cam {
 						f.setSize(width,height);
 						video.setBounds(0, 0, width, height); // augmenter la taille de la video
 						jpInformations.setBounds(0, 0, width, height);
+						jpInformations2.setBounds(0, 0, width, height);
 					}
 				}
 			}
@@ -148,7 +145,9 @@ public class Cam {
 	
 	private static void setJPanelInformations() {
 		jpInformations.setLayout(bl);
+		jpInformations2.setLayout(bl);
 		jpInformations.setOpaque(false);
+		jpInformations2.setOpaque(false);
 		
 		/* element 1 --------------------------------- */
 		jpInformations.add(jlSpeed, BorderLayout.WEST);
@@ -161,6 +160,10 @@ public class Cam {
 		/* element 3 --------------------------------- */
 		setWebcamSize();
 		jpInformations.add(jlWebcamSize, BorderLayout.NORTH);
+		/* ------------------------------------------- */
+		
+		/* element 4 --------------------------------- */
+		jpInformations2.add(jlChrono, BorderLayout.SOUTH);
 		/* ------------------------------------------- */
 	}
 
@@ -194,6 +197,12 @@ public class Cam {
 		jetons = i;
 		showJetons();
 	}
+	
+	public static void refreshChrono(int s,int m) {
+		jlChrono.setText(m+" m "+s+" s");
+		jlChrono.setFont(font);
+		jlChrono.setForeground(Color.red);
+	}
 
 	private static void showJetons() {
 		jlJetons.setText(jetons + "/6 jetons   ");
@@ -202,35 +211,37 @@ public class Cam {
 		jlJetons.setVerticalAlignment(JLabel.BOTTOM);
 	}
 	
-	private static void setXBoxController() {
-		b = new BluetoothManager();
-		xc = new XboxController();
-		xc.setLeftThumbDeadZone(0.2);
-		if (!xc.isConnected()) {
-	      JOptionPane.showMessageDialog(null, 
-	        "Xbox controller not connected.",
-	        "Error",
-	        JOptionPane.ERROR_MESSAGE);
-	      xc.release();
-	      return;
-	    }
-		bbox = new XBoxCtrlListener();
-		xc.addXboxControllerListener(bbox);
-	}
+//	private static void setXBoxController() {
+//		b = new BluetoothManager();
+//		xc = new XboxController();
+//		xc.setLeftThumbDeadZone(0.2);
+//		if (!xc.isConnected()) {
+//	      JOptionPane.showMessageDialog(null, 
+//	        "Xbox controller not connected.",
+//	        "Error",
+//	        JOptionPane.ERROR_MESSAGE);
+//	      xc.release();
+//	      return;
+//	    }
+//		bbox = new XBoxCtrlListener();
+//		xc.addXboxControllerListener(bbox);
+//	}
+//	
+//	private static XBoxCtrlListener bbox;
+//	private static BluetoothManager b;
+//	private static XboxController xc;
+//	
+//	public static XBoxCtrlListener getXBoxCtrlListener() {
+//		return bbox;
+//	}
+//	
+//	public static BluetoothManager getBluetoothManager() {
+//		return b;
+//	}
+//	
+//	public static XboxController getXboxController() {
+//		return xc;
+//	}
 	
-	private static XBoxCtrlListener bbox;
-	private static BluetoothManager b;
-	private static XboxController xc;
 	
-	public static XBoxCtrlListener getXBoxCtrlListener() {
-		return bbox;
-	}
-	
-	public static BluetoothManager getBluetoothManager() {
-		return b;
-	}
-	
-	public static XboxController getXboxController() {
-		return xc;
-	}
 }

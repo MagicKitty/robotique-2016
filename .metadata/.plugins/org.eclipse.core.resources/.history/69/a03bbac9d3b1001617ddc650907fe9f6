@@ -1,0 +1,9 @@
+package Camera;
+
+import javax.swing.JFrame;
+
+public class MaJFrame extends JFrame {
+	public MaJFrame() {
+		setTitle("IHM - Robafis - 2016");
+	}
+}

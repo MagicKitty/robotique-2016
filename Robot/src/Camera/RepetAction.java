@@ -27,12 +27,12 @@ public class RepetAction {
 				Cam.setSpeed(speed);
 				Cam.setJetons(jetons);
 				//calcul des valeurs pour chaque roue
-				Cam.getXBoxCtrlListener().movement.calculateWheelsSpeed();
+//				Cam.getXBoxCtrlListener().movement.calculateWheelsSpeed();
+//				speed = (int)Cam.getXBoxCtrlListener().movement.speed;
 				//System.out.println("L : " + bbox.movement.leftWheel + " R: " + bbox.movement.rightWheel	);
 				//envoi
-				Cam.getBluetoothManager().sendMovement( Cam.getXBoxCtrlListener().movement );
+//				Cam.getBluetoothManager().sendMovement( Cam.getXBoxCtrlListener().movement );
 			} else {
-				System.out.println("Terminé!");
 				t.cancel();
 			}
 		}

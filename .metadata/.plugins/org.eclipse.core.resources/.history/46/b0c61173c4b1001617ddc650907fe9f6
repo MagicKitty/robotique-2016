@@ -1,0 +1,31 @@
+package Camera;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class RepetChrono {
+	private Timer t;
+	static long chrono = 0;
+	
+	static void Go_Chrono() { 
+		chrono = java.lang.System.currentTimeMillis() ;
+	}
+	
+	public RepetChrono() {
+		t = new Timer();
+		t.schedule(new MonAction(), 0, 1000);
+	}
+	
+	class MonAction extends TimerTask {
+		boolean repet = true;
+		public void run() {
+			if (repet) {
+				Go_Chrono();
+				System.out.println(chrono);
+			} else {
+				t.cancel();
+			}
+		}
+	}
+
+}

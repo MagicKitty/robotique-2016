@@ -8,8 +8,6 @@
 	<classpathentry kind="lib" path="/home/nicolas/Universite/Robotique/commons-logging-1.1.1.jar"/>
 	<classpathentry kind="lib" path="/home/nicolas/Universite/Robotique/core-image-1.2.1.jar"/>
 	<classpathentry kind="lib" path="/home/nicolas/Universite/Robotique/core-math-1.2.1.jar"/>
-	<classpathentry kind="lib" path="/home/nicolas/Universite/Robotique/faces-1.2.1.jar"/>
-	<classpathentry kind="lib" path="/home/nicolas/Universite/Robotique/FaceTracker-1.2.1.jar"/>
 	<classpathentry kind="lib" path="/home/nicolas/Universite/Robotique/httpclient-4.2.3.jar"/>
 	<classpathentry kind="lib" path="/home/nicolas/Universite/Robotique/httpcore-4.2.2.jar"/>
 	<classpathentry kind="lib" path="/home/nicolas/Universite/Robotique/httpmime-4.2.3.jar"/>
