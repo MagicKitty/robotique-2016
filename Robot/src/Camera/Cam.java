@@ -2,23 +2,18 @@ package Camera;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-//import java.awt.Dimension;
+import java.awt.Dimension;
 import java.awt.Font;
-//import java.awt.Graphics;
-//import java.awt.Graphics2D;
-//import java.awt.RenderingHints;
-//import java.awt.Toolkit;
-//import java.awt.event.ComponentAdapter;
-//import java.awt.event.ComponentEvent;
-//import java.awt.image.BufferedImage;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.net.MalformedURLException;
 
 import javax.swing.ImageIcon;
-//import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
-//import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 import javax.swing.JPanel;
+import javax.swing.JButton;
 
 import com.github.sarxos.webcam.Webcam;
 import com.github.sarxos.webcam.WebcamPanel;
@@ -36,34 +31,41 @@ public class Cam {
 	public static MaJFrame f;
 	
 	private static WebcamPanel video;
-	
-//	private static Dimension die ,die2;
-//	private static Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
-//	private static int width,height;
 	private static int speed;
 	private static int jetons;
 	private static int widthFrame, heightFrame;
-	
-//	private static int widthScreen = (int)screenSize.getWidth();
-//	private static int heightScreen = (int)screenSize.getHeight();
 	
 	private static JLayeredPane layeredPane = new JLayeredPane();
 	
 	private static BorderLayout bl = new BorderLayout();
 	private static BorderLayout bl2 = new BorderLayout();
+	private static BorderLayout bl3 = new BorderLayout();
+	
+	private static ImageIcon imgRed = new ImageIcon("src/images/rouge.png");
+	private static ImageIcon imgGreen = new ImageIcon("src/images/vert.png");
 	
 	private static JLabel jlSpeed = new JLabel();
 	private static JLabel jlJetons = new JLabel();
 	private static JLabel jlChrono = new JLabel();
 	private static JLabel jlWebcamSize = new JLabel();
+	private static JLabel imageRed = new JLabel(imgRed);
+	private static JLabel imageGreen = new JLabel(imgGreen);
+
+	private static JTextField jtfChat = new JTextField();
+	
 	private static JPanel jpInformations = new JPanel();
 	private static JPanel jpInformations2 = new JPanel();
+	private static JPanel jpForChat = new JPanel();
 	
 	private static Font font = new Font("Arial",Font.PLAIN,20);
 	private static Font font2 = new Font("Arial",Font.BOLD,15);
 	
-	private static JLabel image;
+	private static JButton jbSend;
+	
+	private static String message = "";
+	
+	private static Boolean color = false;
 
 	static {
 		Webcam.setDriver(new IpCamDriver());
@@ -75,12 +77,17 @@ public class Cam {
 	}
 
 	public static void startIHM() {
-		image = new JLabel(new ImageIcon("src/images/rouge.png"));
-		image.setHorizontalAlignment(JLabel.LEFT);
+		setWebcamIPAsVideo();
 		
 //		setXBoxController();
 		
-		setWebcamIPAsVideo();
+		imageRed.setHorizontalAlignment(JLabel.LEFT);
+		imageGreen.setHorizontalAlignment(JLabel.LEFT);
+		
+		jtfChat.setPreferredSize(new Dimension(widthFrame-80,30));
+		jtfChat.setHorizontalAlignment(JTextField.LEFT);
+		jbSend = new JButton("Envoi");
+		jbSend.addActionListener(new Action());
 		
 		f = new MaJFrame(widthFrame,heightFrame);
 		
@@ -88,13 +95,13 @@ public class Cam {
 
 		layeredPane.add(video, new Integer(1));
 
-//		windowResize();
-
 		setJPanelInformations();
 		
 		layeredPane.add(jpInformations, new Integer(2));
 		
 		layeredPane.add(jpInformations2, new Integer(3));
+		
+		layeredPane.add(jpForChat, new Integer(4));
 	}
 	
 	private static void setWebcamIPAsVideo() {
@@ -119,13 +126,13 @@ public class Cam {
 		video.setBounds(0, 0, widthFrame, heightFrame);
 		jpInformations.setBounds(0, 0, widthFrame, heightFrame);
 		jpInformations2.setBounds(0, 0, widthFrame, heightFrame);
+		jpForChat.setBounds(0, heightFrame, widthFrame, 40);
 	}
 
-
-	
 	private static void setJPanelInformations() {
 		jpInformations.setLayout(bl);
 		jpInformations2.setLayout(bl2);
+		jpForChat.setLayout(bl3);
 		jpInformations.setOpaque(false);
 		jpInformations2.setOpaque(false);
 		
@@ -146,8 +153,14 @@ public class Cam {
 		jpInformations2.add(jlChrono, BorderLayout.SOUTH);
 		/* ------------------------------------------- */
 		
+		/* element 5 --------------------------------- */
+		jpInformations2.add(imageRed, BorderLayout.NORTH);
+		/* ------------------------------------------- */
 		
-		jpInformations2.add(image, BorderLayout.NORTH);
+		/* element 6 --------------------------------- */
+		jpForChat.add(jtfChat, BorderLayout.WEST);
+		jpForChat.add(jbSend, BorderLayout.EAST);
+		/* ------------------------------------------- */
 	}
 
 	private static void setWebcamSize() {
@@ -219,35 +232,25 @@ public class Cam {
 //	public static XboxController getXboxController() {
 //		return xc;
 //	}
+
 	
-//	private static void windowResize() {
-//	die = f.getSize();
-//	f.addComponentListener(new ComponentAdapter(){
-//		public void componentResized(ComponentEvent e) {
-//			width = f.getWidth();
-//			height = f.getHeight();
-//			double proportion = (double)width/(double)height;
-//			if(e.getSource() instanceof JFrame)	{
-//				die2 = f.getSize();
-//				if(die2.equals(die)) {
-//					die = die2;
-//				} else {
-//					while(proportion < (1.333) && (width <= widthScreen-100)) {
-//						width++;
-//						proportion = (double)width/(double)height;
-//					}
-//					while(proportion > (1.34) && (height <= heightScreen-100)) {
-//						height++;
-//						proportion = (double)width/(double)height;
-//					}
-//					f.setSize(width,height);
-//					video.setBounds(0, 0, width, height); // augmenter la taille de la video
-//					jpInformations.setBounds(0, 0, width, height);
-//					jpInformations2.setBounds(0, 0, width, height);
-//				}
-//			}
-//		}
-//	});
-//}
+	static class Action implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
+			message = jtfChat.getText();
+			System.out.println(message);
+			layeredPane.remove(jpInformations2);
+			if(color == false) {
+				color = true;
+				jpInformations2.remove(imageRed);
+				jpInformations2.add(imageGreen, BorderLayout.NORTH);
+			} else {
+				color = false;
+				jpInformations2.remove(imageGreen);
+				jpInformations2.add(imageRed, BorderLayout.NORTH);
+			}
+			layeredPane.add(jpInformations2, new Integer(3));
+//			send(message);
+		}
+	}
 	
 }
