@@ -41,6 +41,7 @@ public class Cam {
 	private static BorderLayout bl = new BorderLayout();
 	private static BorderLayout bl2 = new BorderLayout();
 	private static BorderLayout bl3 = new BorderLayout();
+	private static BorderLayout bl4 = new BorderLayout();
 	
 	private static ImageIcon imgRed = new ImageIcon("src/images/rouge.png");
 	private static ImageIcon imgGreen = new ImageIcon("src/images/vert.png");
@@ -57,13 +58,16 @@ public class Cam {
 	private static JPanel jpInformations = new JPanel();
 	private static JPanel jpInformations2 = new JPanel();
 	private static JPanel jpForChat = new JPanel();
+	private static JPanel jpForDoubleBip = new JPanel();
 	
 	private static Font font = new Font("Arial",Font.PLAIN,20);
 	private static Font font2 = new Font("Arial",Font.BOLD,15);
 	
 	private static JButton jbSend;
+	private static JButton jbDoubleBip;
 	
 	private static String message = "";
+	private static String bip = ":BB:";
 	
 	private static Boolean color = false;
 
@@ -84,10 +88,12 @@ public class Cam {
 		imageRed.setHorizontalAlignment(JLabel.LEFT);
 		imageGreen.setHorizontalAlignment(JLabel.LEFT);
 		
-		jtfChat.setPreferredSize(new Dimension(widthFrame-80,30));
+		jtfChat.setPreferredSize(new Dimension(widthFrame - 160,30));
 		jtfChat.setHorizontalAlignment(JTextField.LEFT);
 		jbSend = new JButton("Envoi");
-		jbSend.addActionListener(new Action());
+		jbSend.addActionListener(new ActionSend());
+		jbDoubleBip = new JButton("Bip!");
+		jbDoubleBip.addActionListener(new ActionBip());
 		
 		f = new MaJFrame(widthFrame,heightFrame);
 		
@@ -102,6 +108,8 @@ public class Cam {
 		layeredPane.add(jpInformations2, new Integer(3));
 		
 		layeredPane.add(jpForChat, new Integer(4));
+		
+		layeredPane.add(jpForDoubleBip, new Integer(5));
 	}
 	
 	private static void setWebcamIPAsVideo() {
@@ -126,13 +134,15 @@ public class Cam {
 		video.setBounds(0, 0, widthFrame, heightFrame);
 		jpInformations.setBounds(0, 0, widthFrame, heightFrame);
 		jpInformations2.setBounds(0, 0, widthFrame, heightFrame);
-		jpForChat.setBounds(0, heightFrame, widthFrame, 40);
+		jpForChat.setBounds(0, heightFrame, widthFrame - 80, 40);
+		jpForDoubleBip.setBounds(widthFrame - 80, heightFrame, 80, 40);
 	}
 
 	private static void setJPanelInformations() {
 		jpInformations.setLayout(bl);
 		jpInformations2.setLayout(bl2);
 		jpForChat.setLayout(bl3);
+		jpForDoubleBip.setLayout(bl4);
 		jpInformations.setOpaque(false);
 		jpInformations2.setOpaque(false);
 		
@@ -158,6 +168,10 @@ public class Cam {
 		/* ------------------------------------------- */
 		
 		/* element 6 --------------------------------- */
+		jpForDoubleBip.add(jbDoubleBip, BorderLayout.EAST);
+		/* ------------------------------------------- */
+		
+		/* element 7 --------------------------------- */
 		jpForChat.add(jtfChat, BorderLayout.WEST);
 		jpForChat.add(jbSend, BorderLayout.EAST);
 		/* ------------------------------------------- */
@@ -234,9 +248,10 @@ public class Cam {
 //	}
 
 	
-	static class Action implements ActionListener {
+	static class ActionSend implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			message = jtfChat.getText();
+			jtfChat.setForeground(Color.gray);
 			System.out.println(message);
 			layeredPane.remove(jpInformations2);
 			if(color == false) {
@@ -250,6 +265,13 @@ public class Cam {
 			}
 			layeredPane.add(jpInformations2, new Integer(3));
 //			send(message);
+		}
+	}
+	
+	static class ActionBip implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
+			System.out.println(bip);
+//			send(bip);
 		}
 	}
 	
