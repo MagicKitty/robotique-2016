@@ -2,18 +2,19 @@ package Camera;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Dimension;
+//import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.RenderingHints;
-import java.awt.Toolkit;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
-import java.awt.image.BufferedImage;
+//import java.awt.Graphics;
+//import java.awt.Graphics2D;
+//import java.awt.RenderingHints;
+//import java.awt.Toolkit;
+//import java.awt.event.ComponentAdapter;
+//import java.awt.event.ComponentEvent;
+//import java.awt.image.BufferedImage;
 import java.net.MalformedURLException;
 
-import javax.swing.JFrame;
+import javax.swing.ImageIcon;
+//import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
 //import javax.swing.JOptionPane;
@@ -32,24 +33,25 @@ import com.github.sarxos.webcam.ds.ipcam.IpCamMode;
 
 public class Cam {
 
-	private static MaJFrame f;
+	public static MaJFrame f;
 	
 	private static WebcamPanel video;
 	
-	private static Dimension die ,die2;
-	private static Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+//	private static Dimension die ,die2;
+//	private static Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
-	private static int width,height;
+//	private static int width,height;
 	private static int speed;
 	private static int jetons;
 	private static int widthFrame, heightFrame;
 	
-	private static int widthScreen = (int)screenSize.getWidth();
-	private static int heightScreen = (int)screenSize.getHeight();
+//	private static int widthScreen = (int)screenSize.getWidth();
+//	private static int heightScreen = (int)screenSize.getHeight();
 	
 	private static JLayeredPane layeredPane = new JLayeredPane();
 	
 	private static BorderLayout bl = new BorderLayout();
+	private static BorderLayout bl2 = new BorderLayout();
 	
 	private static JLabel jlSpeed = new JLabel();
 	private static JLabel jlJetons = new JLabel();
@@ -60,6 +62,8 @@ public class Cam {
 	
 	private static Font font = new Font("Arial",Font.PLAIN,20);
 	private static Font font2 = new Font("Arial",Font.BOLD,15);
+	
+	private static JLabel image;
 
 	static {
 		Webcam.setDriver(new IpCamDriver());
@@ -71,6 +75,8 @@ public class Cam {
 	}
 
 	public static void startIHM() {
+		image = new JLabel(new ImageIcon("src/images/rouge.png"));
+		image.setHorizontalAlignment(JLabel.LEFT);
 		
 //		setXBoxController();
 		
@@ -82,7 +88,7 @@ public class Cam {
 
 		layeredPane.add(video, new Integer(1));
 
-		windowResize();
+//		windowResize();
 
 		setJPanelInformations();
 		
@@ -111,50 +117,24 @@ public class Cam {
 		widthFrame = (int)webcam.getViewSize().getWidth();
 		heightFrame = (int)webcam.getViewSize().getHeight();
 		video.setBounds(0, 0, widthFrame, heightFrame);
+		jpInformations.setBounds(0, 0, widthFrame, heightFrame);
+		jpInformations2.setBounds(0, 0, widthFrame, heightFrame);
 	}
 
-	private static void windowResize() {
-		die = f.getSize();
-		f.addComponentListener(new ComponentAdapter(){
-			public void componentResized(ComponentEvent e) {
-				width = f.getWidth();
-				height = f.getHeight();
-				double proportion = (double)width/(double)height;
-				if(e.getSource() instanceof JFrame)	{
-					die2 = f.getSize();
-					if(die2.equals(die)) {
-						die = die2;
-					} else {
-						while(proportion < (1.333) && (width <= widthScreen-100)) {
-							width++;
-							proportion = (double)width/(double)height;
-						}
-						while(proportion > (1.34) && (height <= heightScreen-100)) {
-							height++;
-							proportion = (double)width/(double)height;
-						}
-						f.setSize(width,height);
-						video.setBounds(0, 0, width, height); // augmenter la taille de la video
-						jpInformations.setBounds(0, 0, width, height);
-						jpInformations2.setBounds(0, 0, width, height);
-					}
-				}
-			}
-		});
-	}
+
 	
 	private static void setJPanelInformations() {
 		jpInformations.setLayout(bl);
-		jpInformations2.setLayout(bl);
+		jpInformations2.setLayout(bl2);
 		jpInformations.setOpaque(false);
 		jpInformations2.setOpaque(false);
 		
 		/* element 1 --------------------------------- */
-		jpInformations.add(jlSpeed, BorderLayout.WEST);
+		jpInformations.add(jlSpeed, BorderLayout.EAST);
 		/* ------------------------------------------- */
 		
 		/* element 2 --------------------------------- */
-		jpInformations.add(jlJetons, BorderLayout.EAST);
+		jpInformations.add(jlJetons, BorderLayout.WEST);
 		/* ------------------------------------------- */
 		
 		/* element 3 --------------------------------- */
@@ -165,6 +145,9 @@ public class Cam {
 		/* element 4 --------------------------------- */
 		jpInformations2.add(jlChrono, BorderLayout.SOUTH);
 		/* ------------------------------------------- */
+		
+		
+		jpInformations2.add(image, BorderLayout.NORTH);
 	}
 
 	private static void setWebcamSize() {
@@ -180,14 +163,7 @@ public class Cam {
 	}
 
 	private static void showSpeed() {
-		if(speed >= 1000 )
-			jlSpeed.setText("" + speed + " : tr/min");
-		if(speed >= 100 && speed < 1000)
-			jlSpeed.setText("  " + speed + " : tr/min");
-		if(speed >= 10 && speed < 100)
-			jlSpeed.setText("    " + speed + " : tr/min");
-		if(speed >= 0 && speed < 10)
-			jlSpeed.setText("      " + speed + " : tr/min");
+		jlSpeed.setText(speed + " : tr/min");
 		jlSpeed.setFont(font);
 		jlSpeed.setForeground(Color.red);
 		jlSpeed.setVerticalAlignment(JLabel.BOTTOM);
@@ -202,6 +178,7 @@ public class Cam {
 		jlChrono.setText(m+" m "+s+" s");
 		jlChrono.setFont(font);
 		jlChrono.setForeground(Color.red);
+		jlChrono.setHorizontalAlignment(JLabel.CENTER);
 	}
 
 	private static void showJetons() {
@@ -243,5 +220,34 @@ public class Cam {
 //		return xc;
 //	}
 	
+//	private static void windowResize() {
+//	die = f.getSize();
+//	f.addComponentListener(new ComponentAdapter(){
+//		public void componentResized(ComponentEvent e) {
+//			width = f.getWidth();
+//			height = f.getHeight();
+//			double proportion = (double)width/(double)height;
+//			if(e.getSource() instanceof JFrame)	{
+//				die2 = f.getSize();
+//				if(die2.equals(die)) {
+//					die = die2;
+//				} else {
+//					while(proportion < (1.333) && (width <= widthScreen-100)) {
+//						width++;
+//						proportion = (double)width/(double)height;
+//					}
+//					while(proportion > (1.34) && (height <= heightScreen-100)) {
+//						height++;
+//						proportion = (double)width/(double)height;
+//					}
+//					f.setSize(width,height);
+//					video.setBounds(0, 0, width, height); // augmenter la taille de la video
+//					jpInformations.setBounds(0, 0, width, height);
+//					jpInformations2.setBounds(0, 0, width, height);
+//				}
+//			}
+//		}
+//	});
+//}
 	
 }

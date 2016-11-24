@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename compilation unit &apos;Camera.WebcamMotionDetector.java&apos; to &apos;WebcamMotion.java&apos;&#x0A;- Original project: &apos;Robot&apos;&#x0A;- Original element: &apos;Camera.WebcamMotionDetector.java&apos;&#x0A;- Renamed element: &apos;Camera.WebcamMotion.java&apos;" description="Rename compilation unit &apos;WebcamMotionDetector.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;Camera{WebcamMotionDetector.java" name="WebcamMotion.java" references="false" stamp="1476288403115" version="1.0"/>
-</session>
