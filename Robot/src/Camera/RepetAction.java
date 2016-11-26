@@ -8,6 +8,7 @@ public class RepetAction {
 	private Timer t;
 	private static int speed;
 	private static int jetons;
+	private static int batteryLevel;
 	private Random r;
 
 	public RepetAction() {
@@ -15,7 +16,8 @@ public class RepetAction {
 		r = new Random();
 		speed = 0;
 		jetons = 0;
-		t.schedule(new MonAction(), 0, 100);
+		batteryLevel = 0;
+		t.schedule(new MonAction(), 0, 2000);
 	}
 
 	class MonAction extends TimerTask {
@@ -24,8 +26,10 @@ public class RepetAction {
 			if (repet) {
 				speed = (r.nextInt(26));
 				jetons = (r.nextInt(7));
+				batteryLevel = (r.nextInt(101));
 				Cam.setSpeed(speed);
 				Cam.setJetons(jetons);
+				Cam.setBatteryLevel(batteryLevel);
 				//calcul des valeurs pour chaque roue
 //				Cam.getXBoxCtrlListener().movement.calculateWheelsSpeed();
 //				speed = (int)Cam.getXBoxCtrlListener().movement.speed;
@@ -44,5 +48,9 @@ public class RepetAction {
 	
 	public int getJetonsValue() {
 		return jetons;
+	}
+	
+	public int getBatteryLevelValue() {
+		return batteryLevel;
 	}
 }
